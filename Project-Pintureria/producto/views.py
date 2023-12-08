@@ -8,3 +8,4 @@ from .models import Producto
 class ProductoList(ListView):
     model = Producto
     template_name = 'producto/index.html'
+

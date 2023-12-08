@@ -1,0 +1,31 @@
+{% extends 'core/Padre.html' %}
+
+{% block contenido %}
+ <h1>LISTA VENDEDORES</h1>
+    <p class="lead fw-normal text-black-30 mb-10">LISTA VENDEDORES 
+   
+        {% for vendedor in Vendedores %}
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h6 style="color: #333; background-color: #eaf2ff; padding: 8px; border-radius: 5px; margin-bottom: 10px; flex-grow: 1;">
+                    {{Vendedor.vendedor}} ({{Vendedor.apellido}})
+                </h6>
+                <div>
+                    <button style="background-color: #4a90e2; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                        <a href="{% url '/cliente' curso.pk %}" style="color: white;">Editar</a>
+                    </button>
+                    <button style="background-color:  #FF5733; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                        <a href="{% url '/cliente' curso.pk %}" style="color: white;">Eliminar</a>
+                    </button>
+                </div>
+            </div>
+        </p> 
+        {% endfor %}
+        </div>
+
+
+
+
+
+
+
+{% endblock contenido %}
