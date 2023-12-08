@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from. import views
+from producto import views
 
 # Create your views here.
 def core_view (request):
