@@ -1,0 +1,21 @@
+{% extends 'core/Padre.html' %}
+
+
+
+
+{% block contenido %}
+  <h1>Agregar Nuevo Vendedor</h1>
+
+  <form method="post" class="form">{% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Guardar nuevo vendedor</button>
+  </form>
+
+  <a href='/vendedor-lista' >Volver al listado de vendedores</a>
+ 
+
+{% endblock %}
+
+    

@@ -1,0 +1,21 @@
+{% extends 'core/Padre.html' %}
+
+
+
+
+{% block contenido %}
+  <h1>Agregar Nuevo Cliente</h1>
+
+  <form method="post" class="form">{% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Guardar nuevo cliente</button>
+  </form>
+
+  <a href='/cliente-lista' >Volver al listado de clientes</a>
+ 
+
+{% endblock %}
+
+    

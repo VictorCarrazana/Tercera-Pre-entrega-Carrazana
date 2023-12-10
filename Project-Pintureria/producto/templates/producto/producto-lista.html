@@ -1,0 +1,40 @@
+{% extends 'core/Padre.html' %}
+
+
+{% block contenido %}
+ <h1>LISTA PRODUCTOS</h1>
+<div style="margin-top: 20xp;">
+    <h4 style="color: #4a90e2; border-bottom: 2px solid #4a90e2; padding-bottom: 10px;">LISTA DE PRODUCTOS</h4>
+
+    <!-- Button for "Create Curso" -->
+    <button style="background-color: #1b3950; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 15px;">
+    <a href="/producto-nuevo" style="color: white;">Nuevo</a>
+    </button>
+</div>  
+    
+
+<div style="margin-top: 20px;">
+    {% for Producto in Producto %}
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h6 style="color: #333; background-color: #eaf2ff; padding: 8px; border-radius: 5px; margin-bottom: 10px; flex-grow: 1;">
+                {{Producto.nombre}} {{Producto.tamaño}} ($ {{Producto.precio}}), Quedan: {{Producto.stock}}
+            </h6>
+            <div>
+                <button style="background-color: #4a90e2; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                    <a href="/producto-editar/{{Producto.id}}" style="color: white;">Editar</a>
+                </button>
+                <button style="background-color:  #FF5733; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                    <a href="/producto-delete/{{Producto.id}}" style="color: white;">Eliminar</a>
+                </button>
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+
+
+
+
+{% endblock contenido %}
+   

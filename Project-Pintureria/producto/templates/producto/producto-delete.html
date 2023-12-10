@@ -1,0 +1,62 @@
+{% extends 'core/Padre.html' %}
+
+
+
+{% block contenido %}
+
+
+
+<!-- Comments section-->
+<section>
+    <div class="card bg-light">
+        <div class="card-body">
+            <form method="post">   {% csrf_token %}
+                    <!-- Comment with nested comments-->
+                    
+                        <!-- Parent comment-->
+                        <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                        <div class="ms-3">
+                        <div class="fw-bold"> </div>
+                            
+                             <br>
+                             <br>
+                             <br>
+                        
+                            
+                             <h1>Estas seguro de eliminar "{{ Producto }}"?</h1>
+                            
+                        
+                        
+                        
+
+
+                                <!-- Child comment 1-->
+                                <button class="btn" type="submit"> <div class="d-flex mt-4" >
+                                    <div class="flex-shrink-0">
+                                    <img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /> </div>
+                                    <div class="ms-3">
+                                    <div class="fw-bold">Si, adelante</div>
+                                    <a href="/producto-delete/{{Producto.id}}"></a>
+                                    </div>
+                                </button>
+            </form>
+                                <div>
+                                   
+                                    <a href="/producto-lista"> <div class="d-flex mt-4">
+                                    <div class="flex-shrink-0">
+                                    <img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /> </div>
+                                    <div class="ms-3">
+                                    <div class="fw-bold">No, prefiero volver atras</div>
+                                    </a>
+                                    
+                                </div>
+                            
+                            
+                           
+                    </div>
+                </div>
+            
+        </div> 
+    </div>
+</section>
+{% endblock  %}

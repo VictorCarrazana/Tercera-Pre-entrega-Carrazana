@@ -2,29 +2,29 @@
 
 {% block contenido %}
  
-  <h1>LISTA VENDEDOR</h1>
-  <div style="margin-top: 20px;">
-    <h4 style="color: #4a90e2; border-bottom: 2px solid #4a90e2; padding-bottom: 10px; display: inline-block;">LISTA DE VENDEDORES</h4>
+  <h1>LISTA CLIENTE</h1>
+<div style="margin-top: 20xp;">
+    <h4 style="color: #4a90e2; border-bottom: 2px solid #4a90e2; padding-bottom: 10px;">LISTA DE CLIENTES</h4>
 
     <!-- Button for "Create Curso" -->
-    <button style="background-color: #1b3950; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 15px; float: right;">
-        <a href="/vendedor-new" style="color: white; text-decoration: none;">Nuevo</a>
+    <button style="background-color: #1b3950; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 15px;">
+    <a href="/cliente-new" style="color: white;">Nuevo</a>
     </button>
-</div>
+</div>  
       
   
   <div style="margin-top: 20px;">
-      {% for Vendedor in Vendedor %}
+      {% for Cliente in Cliente %}
           <div style="display: flex; justify-content: space-between; align-items: center;">
               <h6 style="color: #333; background-color: #eaf2ff; padding: 8px; border-radius: 5px; margin-bottom: 10px; flex-grow: 1;">
-                  {{Vendedor.nombre}} {{Vendedor.apellido}} Legajo N° {{Vendedor.legajo}}
+                  {{Cliente.nombre}} {{Producto.apellido}}
               </h6>
               <div>
                   <button style="background-color: #4a90e2; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-                      <a href="/vendedor-editar/{{Vendedor.id}}" style="color: white;">Editar</a>
+                      <a href="/cliente-editar/{{Cliente.id}}" style="color: white;">Editar</a>
                   </button>
                   <button style="background-color:  #FF5733; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-                      <a href="/vendedor-eliminar/{{Vendedor.id}}" style="color: white;">Eliminar</a>
+                      <a href="/cliente-delete/{{Cliente.id}}" style="color: white;">Eliminar</a>
                   </button>
               </div>
           </div>

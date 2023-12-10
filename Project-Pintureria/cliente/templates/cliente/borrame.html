@@ -1,0 +1,138 @@
+{% block contenidoQueCambia%}
+
+<style>
+    .form-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 50%;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .form-container h2 {
+        margin-bottom: 20px;
+        color: green;
+    }
+
+    .form-field {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+</style>
+
+<div class="form-container">
+    <h2>Agregar Curso</h2>
+    <form action="{% url 'AppCoder:curso-create' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-field">
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value="Crear">
+    </form>
+</div>
+
+{% endblock%}
+
+
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdownVendedores" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vendedores</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownVendedores">
+        <li><a class="dropdown-item" href="editar-vendedores.html">Editar vendedores</a></li>
+        <li><a class="dropdown-item" href="agregar-vendedor.html">Agregar vendedor</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Submenú Vendedores</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                <li><a class="dropdown-item" href="sub-editar-vendedores.html">Submenú: Editar vendedores</a></li>
+                <li><a class="dropdown-item" href="sub-agregar-vendedor.html">Submenú: Agregar vendedor</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdownVendedores" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vendedores</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownVendedores">
+        <li><a class="dropdown-item" href="editar-vendedores.html">Editar vendedores</a></li>
+        <li><a class="dropdown-item" href="agregar-vendedor.html">Agregar vendedor</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Submenú Vendedores</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                <li><a class="dropdown-item" href="sub-editar-vendedores.html">Submenú: Editar vendedores</a></li>
+                <li><a class="dropdown-item" href="sub-agregar-vendedor.html">Submenú: Agregar vendedor</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+
+
+
+
+
+
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdownVendedores" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vendedores</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownVendedores">
+        <li><a class="dropdown-item" href="editar-vendedores.html">Editar vendedores</a></li>
+        <li><a class="dropdown-item" href="agregar-vendedor.html">Agregar vendedor</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Submenú Vendedores</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                <li><a class="dropdown-item" href="sub-editar-vendedores.html">Submenú: Editar vendedores</a></li>
+                <li><a class="dropdown-item" href="sub-agregar-vendedor.html">Submenú: Agregar vendedor</a></li>
+            </ul>
+        </li>
+
+#NAV BAR 
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="/"> EL MATE, Pintureria</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="producto-lista">Catalogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cliente-lista">Clientes</a></li>
+            
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownVendedores" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vendedores</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownVendedores">
+                        <li><a class="dropdown-item" href="editar-vendedores.html">Editar vendedores</a></li>
+                        <li><a class="dropdown-item" href="agregar-vendedor.html">Agregar vendedor</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Submenú Vendedores</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li><a class="dropdown-item" href="sub-editar-vendedores.html">Submenú: Editar vendedores</a></li>
+                                <li><a class="dropdown-item" href="sub-agregar-vendedor.html">Submenú: Agregar vendedor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+     
+            </ul>
+        </div>
+    </div>
+</nav>

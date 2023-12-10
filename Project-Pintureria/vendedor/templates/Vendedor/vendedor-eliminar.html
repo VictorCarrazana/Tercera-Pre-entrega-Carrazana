@@ -1,0 +1,17 @@
+{% extends 'core/Padre.html' %}
+
+
+
+{% block contenido %}
+
+h1>Eliminar Vendedor</h1>
+
+  <p>¿Estás seguro de que deseas eliminar el vendedor "{{ vendedor.nombre }} {{vendedor.apellido}}"?</p>
+
+  <form method="post" class="form">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+    <a href="/vendedor-lista" class="btn btn-secondary">Cancelar</a>
+  </form>
+  
+{% endblock  %}
